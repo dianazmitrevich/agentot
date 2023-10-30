@@ -1,0 +1,83 @@
+.sizzapad__wrapper {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background: $white-color;
+    position: relative;
+
+    @include sm-tablet {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: calc(100% - 480px - ((100% - 1180px) / 2));
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-image: url('../images/sizzapad__banner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include desktop {
+            width: 50%;
+            background-position: center;
+        }
+
+        @include sm-tablet {
+            width: calc(240% / 575 * 100);
+        }
+
+        @include mobile {
+            width: calc(160% / 575 * 100);
+        }
+    }
+}
+
+.sizzapad__heading {
+    font-size: 24px;
+    color: $dark-color;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+
+    @include l-tablet {
+        font-size: 20px;
+    }
+
+    @include sm-tablet {
+        font-size: 16px;
+    }
+}
+
+.sizzapad__title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 420px;
+    margin-bottom: 20px;
+
+    span {
+        color: $green-color;
+    }
+
+    @include l-tablet {
+        max-width: 340px;
+    }
+}
+
+.sizzapad__subtitle {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 56px;
+
+    @include l-tablet {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    @include sm-tablet {
+        font-size: 16px;
+    }
+}

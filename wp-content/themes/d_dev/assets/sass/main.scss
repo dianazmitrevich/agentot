@@ -1,0 +1,283 @@
+$base-font-family: 'SF Pro Display', sans-serif;
+$base-font-size: 10px;
+$base-line-height: 1.15;
+$bg-color: #F6F6F6;
+$green-color: #408400;
+$green2-color: #C9DDC3;
+$dark-color: #4A4A4A;
+$light-color: #B5B5B5;
+$black-color: #000;
+$white-color: #fff;
+$transiton-25: all .25s ease-in-out;
+$transiton-15: all .15s ease-in-out;
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@mixin mobile {
+   @media (max-width: 575px) {
+      @content;
+   }
+}
+
+@mixin sm-tablet {
+   @media (max-width: 767px) {
+      @content;
+   }
+}
+
+@mixin l-tablet {
+   @media (max-width: 991px) {
+      @content;
+   }
+}
+
+@mixin desktop {
+   @media (max-width: 1439px) {
+      @content;
+   }
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: $base-font-size;
+   line-height: $base-line-height;
+   scroll-behavior: smooth;
+
+   @include l-tablet {
+      font-size: 8px;
+   }
+
+   @include sm-tablet {
+      font-size: 7px;
+   }
+
+   @include mobile {
+      font-size: 6px;
+   }
+}
+
+// ::-webkit-scrollbar {
+//    width: 10px;
+//    background: #fff;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//    width: 10px;
+//    background: #2F2F2F;
+// }
+
+body {
+   font-size: 1.6rem;
+   font-family: $base-font-family;
+   line-height: 1.5;
+   font-weight: 400;
+   overflow-x: hidden;
+   overflow-y: scroll;
+}
+
+main {
+   padding-top: 100px;
+   background: $bg-color;
+   color: $black-color;
+}
+
+.container {
+   width: 100%;
+   padding: 0 20px;
+   margin: 0 auto;
+   position: relative;
+}
+
+@media (min-width: 576px) {
+   .container {
+      max-width: 560px;
+   }
+}
+
+@media (min-width: 768px) {
+   .container {
+      max-width: 760px;
+   }
+}
+
+@media (min-width: 992px) {
+   .container {
+      max-width: 980px;
+   }
+}
+
+@media (min-width: 1440px) {
+   .container {
+      max-width: 1220px;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: unset;
+}
+
+.g-wrap {
+   min-width: 400px;
+   margin: 0 auto;
+}
+
+.outer-bg {
+   display: flex;
+   flex-direction: column;
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.header-scroll {
+   // .header__desktop {
+   //    margin-top: -81px;
+   // }
+
+   // .header__col-big-menu {
+   //    top: calc((100vh - (100vh - 100%)) * (-1));
+   // }
+
+   // main {
+   //    padding-top: 120px;
+   // }
+}
+
+.stop-scroll {
+   overflow: hidden !important;
+
+   ::-webkit-scrollbar {
+      width: 0;
+   }
+}
+
+.show {
+   opacity: 1 !important;
+   visibility: visible !important;
+   display: block !important;
+}
+
+.overflow-hidden {
+   overflow: hidden
+}
+
+.mb-0 {
+   margin-bottom: 0 !important;
+}
+
+.mb-2 {
+   margin-bottom: 20px;
+}
+
+.mt-1 {
+   margin-top: 10px !important;
+}
+
+.mt-2 {
+   margin-top: 20px !important;
+}
+
+.mt-0 {
+   margin-top: 0 !important;
+}
+
+.pt-0 {
+   padding-top: 0 !important;
+}
+
+.h1 {
+   font-size: 9.6rem;
+   font-weight: 700;
+   line-height: normal;
+   text-transform: uppercase;
+
+   @include desktop {
+      font-size: 7rem;
+   }
+
+   @include sm-tablet {
+      font-size: 6rem;
+   }
+}
+
+.h2 {
+   font-size: 4.8rem;
+   font-weight: 700;
+   line-height: normal;
+   padding-bottom: 24px;
+   position: relative;
+
+   &:before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 1px;
+      background: $green-color;
+      bottom: 0;
+      left: 0;
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 200px);
+      height: 1px;
+      background: #B5B5B5;
+      bottom: 0;
+      right: 0;
+   }
+}
+
+.main-btn {
+   display: block;
+   padding: 9px 22px;
+   font-size: 20px;
+   color: $white-color;
+   background: $green-color;
+   height: 44px;
+   line-height: normal;
+   white-space: nowrap;
+   transition: $transiton-25;
+   cursor: pointer;
+   width: fit-content;
+}
+
+.main-tr-btn {
+   padding: 9px 22px;
+   font-size: 20px;
+   color: $green-color;
+   border: 1px solid $green-color;
+   height: 44px;
+   line-height: normal;
+   white-space: nowrap;
+   transition: $transiton-25;
+   cursor: pointer;
+   width: fit-content;
+
+   &:hover {
+      background: $green-color;
+      color: $white-color;
+   }
+}
+
+@import '404';
+@import 'block-choose';
+@import 'block-contacts';
+@import 'block-form';
+@import 'block-services';
+@import 'block-sizzapad';
+@import 'breadcrumbs';
+@import 'footer';
+@import 'header';
+@import 'main-benefits';
+@import 'main-clients';
+@import 'main-hero';
+@import 'main-team';
+@import 'other-articles';
+@import 'page-service';
+@import 'page-team';

@@ -1,0 +1,221 @@
+.block-contacts {
+    margin-bottom: 120px;
+
+    @include l-tablet {
+        margin-bottom: 80px;
+    }
+
+    @include sm-tablet {
+        margin-bottom: 60px;
+    }
+
+    .title-wrap {
+        position: relative;
+        margin-bottom: 20px;
+
+        .main-tr-btn {
+            position: absolute;
+            top: 8px;
+            right: 0;
+        }
+    }
+
+    .contacts__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .contacts__card {
+        width: calc(50% - 10px);
+        background: $white-color;
+        border: 1px solid transparent;
+        margin-bottom: 20px;
+        padding: 20px 20px 20px 56px;
+        display: flex;
+        position: relative;
+
+        @include l-tablet {
+            width: 100%;
+        }
+
+        @include sm-tablet {
+            flex-direction: column;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat !important;
+        }
+
+        &:hover {
+            border: 1px solid $green-color;
+        }
+
+        &:nth-child(6n - 5) {
+            &:before {
+                background-image: url("../images/form-1.svg");
+            }
+        }
+
+        &:nth-child(6n - 4) {
+            &:before {
+                background-image: url("../images/form-2.svg");
+            }
+        }
+
+        &:nth-child(6n - 3) {
+            &:before {
+                background-image: url("../images/form-3.svg");
+            }
+        }
+
+        &:nth-child(6n - 2) {
+            &:before {
+                background-image: url("../images/form-4.svg");
+            }
+        }
+
+        &:nth-child(6n - 1) {
+            &:before {
+                background-image: url("../images/form-5.svg");
+            }
+        }
+
+        &:nth-child(6n) {
+            &:before {
+                background-image: url("../images/form-6.svg");
+            }
+        }
+
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+            margin-bottom: 0;
+        }
+
+        .card__title {
+            font-size: 22px;
+            color: $green-color;
+            font-weight: 500;
+            line-height: normal;
+            width: 290px;
+            margin-right: 20px;
+
+            @include desktop {
+                width: 210px;
+            }
+
+            @include l-tablet {
+                width: 50%;
+                padding-right: 20px;
+                font-size: 20px;
+            }
+
+            @include sm-tablet {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        .card__text {
+            font-size: 20px;
+            color: $dark-color;
+            line-height: normal;
+
+            p {
+                margin-bottom: 8px;
+
+                @include sm-tablet {
+                    margin-bottom: 5px;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include l-tablet {
+                font-size: 18px;
+            }
+
+            @include sm-tablet {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .contacts__row {
+        margin-top: 60px;
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: space-between;
+
+        @include l-tablet {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    .contacts__col {
+        width: calc(50% - 10px);
+        padding-left: 56px;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .contacts__col-title {
+        font-size: 22px;
+        color: $green-color;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 8px;
+
+        @include l-tablet {
+            font-size: 20px;
+        }
+
+        @include sm-tablet {
+            font-size: 18px;
+        }
+    }
+
+    .contacts__col-text {
+        font-size: 20px;
+        line-height: normal;
+        max-width: 267px;
+
+        @include sm-tablet {
+            font-size: 16px;
+        }
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: 520px;
+        position: relative;
+    }
+
+    .contacts__route {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

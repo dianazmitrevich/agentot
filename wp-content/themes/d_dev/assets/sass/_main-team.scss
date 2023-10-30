@@ -1,0 +1,229 @@
+.main-team {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    @include l-tablet {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @include sm-tablet {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .title-wrap {
+        position: relative;
+        margin-bottom: 20px;
+
+        .main-tr-btn {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+        }
+    }
+
+    .slider-wrap {
+        display: flex;
+    }
+
+    .team__featured {
+        min-width: 480px;
+        max-width: 480px;
+        margin-right: 20px;
+
+        @include l-tablet {
+            min-width: 364px;
+            max-width: 364px;
+        }
+
+        @include sm-tablet {
+            min-width: 268px;
+            max-width: 268px;
+        }
+
+        @include mobile {
+            min-width: 50%;
+            max-width: 50%;
+        }
+    }
+
+    .team__featured-image {
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include l-tablet {
+            height: 364px;
+        }
+
+        @include sm-tablet {
+            height: 268px;
+            margin-bottom: 10px;
+        }
+
+        @include mobile {
+            aspect-ratio: 1/1;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .team__featured-title {
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20px;
+        color: $dark-color;
+
+        @include l-tablet {
+            margin-bottom: 10px;
+        }
+    }
+
+    .team__featured-subtitle {
+        font-size: 20px;
+        line-height: normal;
+        color: $dark-color;
+
+        @include l-tablet {
+            font-size: 18px;
+        }
+    }
+
+    .team__slider {
+        display: flex;
+        position: relative;
+        height: 630px;
+
+        @include l-tablet {
+            height: 500px;
+        }
+
+        @include sm-tablet {
+            height: 390px;
+        }
+
+        @include mobile {
+            aspect-ratio: 560/430;
+            height: auto;
+            width: 100%;
+        }
+
+        .slider__dots {
+            position: absolute;
+            bottom: 10px;
+            left: 60px;
+            display: flex;
+            align-items: center;
+
+            @include desktop {
+                left: -50px;
+            }
+
+            @include sm-tablet {
+                left: -60px;
+            }
+
+            li {
+                width: 10px;
+                list-style: none;
+                position: relative;
+                margin-left: 10px;
+                margin-right: 10px;
+
+                &:before {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #C9DDC3;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    transition: $transiton-25;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            li.slick-active {
+                &:before {
+                    background: $green-color;
+                }
+            }
+        }
+
+        .slider__item {
+            margin-right: 20px;
+        }
+
+        .slider__item-image {
+            width: 330px;
+            height: 330px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include l-tablet {
+                width: 268px;
+                height: 268px;
+                margin-bottom: 10px;
+            }
+
+            @include sm-tablet {
+                width: 176px;
+                height: 176px;
+            }
+
+            @include mobile {
+                width: 120px;
+                height: 120px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .slider__item-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 8px;
+            color: $dark-color;
+
+            @include l-tablet {
+                font-size: 20px;
+            }
+
+            @include sm-tablet {
+                font-size: 16px;
+            }
+        }
+
+        .slider__item-subtitle {
+            font-size: 20px;
+            line-height: normal;
+            color: $dark-color;
+
+            @include sm-tablet {
+                font-size: 16px;
+            }
+        }
+    }
+}

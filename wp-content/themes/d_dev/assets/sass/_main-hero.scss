@@ -1,0 +1,56 @@
+.main-hero {}
+
+.hero__wrapper {
+    margin-top: 100px;
+    position: relative;
+    width: 1920;
+    height: auto;
+    aspect-ratio: 1440/783;
+
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1440/783;
+        background-image: url('../images/hero__image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include desktop {
+        margin-top: 80px;
+    }
+
+    @include l-tablet {
+        margin-top: 60px;
+    }
+
+    @include sm-tablet {
+        margin-bottom: 40px;
+    }
+}
+
+.hero__title {
+    max-width: 770px;
+
+    @include desktop {
+        max-width: 680px;
+    }
+
+    @include l-tablet {
+        max-width: 580px;
+    }
+
+    @include sm-tablet {
+        max-width: 65%;
+    }
+
+    @include mobile {
+        max-width: 300px;
+    }
+}
